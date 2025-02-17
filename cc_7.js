@@ -15,3 +15,22 @@ function calculateHourlyWage(salary, hoursPerWeek) {
 };
 console.log(calculateHourlyWage(52000, 40));  //should return $25.00
 console.log(calculateHourlyWage(75000, 35));
+
+//Task 3: Arrow Function
+//Scenario: Customer Loyalty Discount
+let calculateLoyaltyDiscount = (amount, years) => {
+    let discountRate
+    if (years >= 5){
+        discountRate = 0.15; //15% discount if over 5 years
+    }
+    else if (years >= 3){
+        discountRate = 0.10;  //10% discount if over 3 years
+    }
+    else if (years < 3) {
+        discountRate = 0.05;  //5% discount if under 3 years
+    }
+    discountedPrice = amount - (amount * discountRate);
+    return `Discounted Price: $${discountedPrice.toFixed(2)}`;
+}
+console.log(calculateLoyaltyDiscount(100, 6)); // Should be Discounted Price: $85.00
+console.log(calculateLoyaltyDiscount(200, 2)); 
