@@ -83,3 +83,14 @@ function createBudgetTracker() {
 let budget = createBudgetTracker ();
 console.log(budget(300)); //should return -$300 since started from zero
 console.log(budget(200)); //then -500
+
+//Task 8: Recursion in JavaScript
+//Scenario: Business Growth Projection
+function calculateGrowth (years, revenue) {
+    if (years <10) {  
+        return calculateGrowth(years + 1, revenue * 1.05 );  //formula made off of revenue increasing by 5% until 10 years
+    }
+    return `Projected Revenue: $${revenue.toFixed(2)}`;
+}
+console.log(calculateGrowth(8, 1000)); // Expected output: "Projected Revenue: $1102.50"
+console.log(calculateGrowth(5, 5000)); // Expected output: "Projected Revenue: $6381.41"
