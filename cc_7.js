@@ -52,3 +52,12 @@ function calculateShippingCost(weight, location, expedited = false ) {   //funct
 }; 
 console.log(calculateShippingCost(10, "USA", true)); // Should readShipping Cost: $20.00
 console.log(calculateShippingCost(5, "Canada", false)); // Shipping Cost: $13.50
+
+//Task 5: Returning Values
+//Scenario: Business Loan Interest Calculation
+function calculateLoanInterest(principal, rate, years) {  
+    let interest = principal * rate * years;              //formula given for loan calculation
+    return `Total Interest: $${interest.toFixed(2)}`;
+}
+console.log(calculateLoanInterest(1000, 0.05, 3)); //Output will be $150.00 
+console.log(calculateLoanInterest(5000, 0.07, 5));
